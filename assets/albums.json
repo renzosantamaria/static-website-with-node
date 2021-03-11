@@ -1,6 +1,6 @@
 {
   "albums": [
-    { "Title": "...And Justice For All", "Name": "Metallica", "NumTracks": 9 },
+    { "Title": "And Justice For All", "Name": "Metallica", "NumTracks": 9 },
     {
       "Title": "20th Century Masters - The Millennium Collection: The Best of Scorpions",
       "Name": "Scorpions",

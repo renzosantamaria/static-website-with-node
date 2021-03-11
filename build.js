@@ -6,6 +6,7 @@ const albums = JSON.parse(fs.readFileSync('./assets/albums.json', {encoding: 'ut
 let pages = []  
 let pageObject = {}
 let content = []
+let pageStyling = process.env.STYLE
 
 const outputDir = 'dist'
 const templatePath = path.join('views', 'layout.ejs')
@@ -24,7 +25,7 @@ for (let i = 0; i < albums.length; i++) {
 }
 
 for (const page of pages) {
-    const data = {page, pageName: page.fileName ,pages}
+    const data = {page, style: pageStyling, pages}
     ejs.renderFile(templatePath, data, function(err, str){
         if (err) {
             console.log(err);

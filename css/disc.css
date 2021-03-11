@@ -22,14 +22,36 @@ header a{
     text-decoration: none;
     margin: 0 0.5rem;
 }
+h1{
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+ul{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 li{
     background-color: white;
-    border: 1px solid black;
+    border: 8px solid rgb(37, 1, 1);
     box-shadow: 2px 2px 1rem rgb(138, 138, 138);
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50%;
     padding: 1rem;
     margin: 2rem;
     list-style: none;
-    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* border-radius: 0.8rem; */
+    background: radial-gradient(#363636, #000000);
+    /* background: radial-gradient(circle at 50%, rgb(49, 1, 1), rgb(0, 0, 0) 60%, rgb(255, 255, 255) 80%, #333 100%); */
+    color: blanchedalmond;
 }
 
 footer{

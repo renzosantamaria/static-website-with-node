@@ -3,10 +3,9 @@ const path = require(('path'))
 const fs = require('fs')
 
 const albums = JSON.parse(fs.readFileSync('./assets/albums.json', {encoding: 'utf8'})).albums
-
-let pages = [] // 
-let pageObject = {} // innehåller "name" och "content"
-let content = [] // ska innehålla 20 album
+let pages = []  
+let pageObject = {}
+let content = []
 
 const outputDir = 'dist'
 const templatePath = path.join('views', 'layout.ejs')
@@ -23,7 +22,6 @@ for (let i = 0; i < albums.length; i++) {
         pageObject = {}
     }       
 }
-console.log(pages);
 
 for (const page of pages) {
     const data = {page, pageName: page.fileName ,pages}

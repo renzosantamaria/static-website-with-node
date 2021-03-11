@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style1.css">
+    <title>Albums</title>
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <nav>
+            <a href=/StaticWebSite/dist/1-20 >First page</a>
+            <a onclick="" href="/StaticWebSite/dist/327-346">Last page</a>
+        </nav>
+    </header>
+    <% for (let i = 0; i < page.albums.length; i++) { %>
+        <li class="album">
+          <h1>Album title: <%= page.albums[i].Title %></h1>
+          <h2>Band: <%= page.albums[i].Name %></h2>
+        </li>
+    <% } %>
+
+    <footer>
+        <% for(let page of pages){ %>
+            <% let index = pages.indexOf(page) + 1 %> 
+            <a href="/StaticWebSite/dist/<%= page.fileName %>"> <%= index %></a>
+        <% } %>
+    </footer>
+</body>
+</html>
